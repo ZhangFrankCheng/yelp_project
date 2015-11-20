@@ -1,0 +1,122 @@
+---
+title: " The report of the yelp project"
+date: "`r date()`"
+author: Frank(zhangc518@gmail.com)
+output: 
+    html_document:
+      theme: united
+      toc: true
+      toc_depth: 2
+      number_sections: true
+      highlight: textmate
+      fig_caption: yes 
+      fig_width: 5
+      fig_height: 4
+      css: style.css
+---
+```{r,echo=F}
+#install.packages(
+#  'printr',
+#  type = 'source',
+#  repos = c('http://yihui.name/xran', 'http://cran.rstudio.com')
+#)
+library(printr)
+```
+
+
+# Introduction 
+
+* [See task discription](Brainstroming.html)
+* My question: What factor (location, parking, wifi, business hour, price and etc. ) contribute the most to the business’s review number and score
+
+# Method and Data 
+
+* Because my question is focused on business, so I will only use the business data. 
+
+## The Raw data 
+
+* File format: Json file 
+
+List of the files: 
+
+```{r,collapse=TRUE,cache=TRUE}
+folder.main <- '~/Dropbox/coursera/Bigdata_tracker/10_capstone_1015/'
+folder.data <- paste(folder.main,'data/',sep = "")
+files.names <- dir(folder.data)
+data.files <-grep(".json",files.names,value = T)
+line.numbers<-sapply(data.files, function(x)
+  system(paste("wc -l < ",paste(folder.data,x,sep="")),intern = T))
+as.data.frame(line.numbers)
+```
+
+Business data:
+```{r,cache=T}
+library(rjson)
+library(stringr)
+
+## business
+#business.no <-as.numeric(str_match(
+#  string = grep("business",line.numbers,value = T)[[1]],pattern = "[0-9]+"))
+
+business.file <- grep("business",data.files,value = T)
+con <- file(paste(folder.data,business.file,sep = ""),"r")
+business.line_1 <- readLines(con, 1) ## Read the first line of text 
+tmp<-fromJSON(business.line_1)
+business.line_1 <- readLines(con, 1) ## Read the first line of text 
+tmp2<-fromJSON(business.line_1)
+names(tmp2)
+business.line_1
+close(con)
+
+#con <- file(paste(folder.data,business.file,sep = ""),"r")
+#business.wifi <-try(sapply(1:business.no, 
+#                           function(x) 
+#                           {print(x);fromJSON(readLines(con,1))$attributes$`Wi-Fi`}))
+#close(con)
+#business.wifi_clean <- unlist(business.wifi)
+#business.wifi_summary <-summary(factor(business.wifi_clean))
+#business.wifi_summary["free"]/sum(business.wifi_summary)*100
+
+```
+
+
+## The data clean process 
+
+```{r}
+
+```
+
+
+### About the Bussinesses 
+
+For all the businesses in the data set, what is:
+
+* total number 
+* types:  
+
+For each business, we can define attributes
+
+* location: 
+    + States 
+    + City
+    + longitude & latitude 
+    + neighborhoods 
+* **stars**
+* review count
+
+
+
+## 
+
+
+
+```{r}
+setwd('~/Documents/GitHub_Frank/yelp_project/') 
+load(file="./qz1.RData")
+
+```
+
+
+# Results 
+
+# Discussion 
