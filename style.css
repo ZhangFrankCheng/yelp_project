@@ -1,0 +1,30 @@
+.title {
+  font-weight:bold;
+}
+#TOC {
+  margin-top:144px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 200px;
+  height: 100%;
+  overflow:auto;
+}
+
+body {
+  max-width: 800px;
+  margin: auto;
+  margin-left:210px;
+  line-height: 20px;
+}
+
+h1, h2, h3 {
+  background-color: rgb(248,248,248);
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left:5px;
+}
+
+h4 {
+  font-size:12px;
+}

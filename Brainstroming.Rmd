@@ -1,0 +1,100 @@
+---
+title: "Brainstorming the yelp project"
+date: "`r date()`"
+author: Frank(zhangc518@gmail.com)
+output: 
+    html_document:
+      theme: united
+      toc: true
+      toc_depth: 2
+      number_sections: true
+      highlight: haddock
+      fig_caption: yes 
+      fig_width: 5
+      fig_height: 4
+      css: style.css
+---
+# Task 2 - Specifying Your Question / Problem
+
+This task is simple. You've finished your exploratory analysis of the data and have a sense of what features are there and how they are related to each other. Now is the point where you want to identify a question or a problem that you are interested in addressing with the data. Write down that question in just 1 to 3 sentences so that another person who is as familiar with the dataset as you are would be able to understand and to assess.
+
+As you develop your question, consider the following characteristics:
+
+* Is the question of interest to you?
+* Is there a particular audience (besides yourself) that might be interested in this question? Characterize that audience (i.e. teenagers living in New York, women living in Seattle, etc.)
+* Has the question already been addressed? Even if the question has been addressed, it might not have been done the way you would have done it. Researching previous attempts to answer this question may give you some insight into how you might approach the problem.
+* Is the question answerable from the data?
+* How specific is your question? Making a question more specific can often simplify your analysis quite a bit at the expense of possibly making the question less interesting. Balancing the specificity with the "interesting-ness" of your question is something you will have to figure out.
+
+## My question
+
+I basically want to know what make a business successful. To define successful, I mean it got most reviews and also got high review score. So the questions in detail is: what factor (location, parking, wifi, business hour, price and etc. ) contribute the most to the business's review number and score.
+
+## Peers' feedback
+
+Below are the reviewers' oppinions:
+
+>  The number of reviews and the stars are both indicators of business success. I think it would be interesting to see what is generally true as a success factor for all types of businesses versus what factors emerge for particular categories. I wonder if the overlap is large or small as well, for all types versus individual types of businesses.
+
+>  I honestly was kind of 'meh' on the question because it's just so broad there is nothing to latch on to. I personally am interested if there is something very negatively correlated to a high review.
+
+The questions I want to addressing is interested to the below people: 
+
+> peer 1 → Business people who want to understand their customers.
+
+> peer 2 → The business, management, customers and researchers.
+
+> peer 3 → Any business owner is likely interested in what the rivals did to achieve success (or failure).
+
+> peer 4 → Businesses that are looking for amenities that tend to correlate with high scores.
+
+> peer 5 → Business owners, business consultants and marketers would all be interested in this question and problem.
+
+# Task 3 - Exploratory Modeling
+
+At this point you need to dig into the data in order answer the question that you specified you wanted to answer. Here you'll need to think about the kinds of models that might be appropriate the answer your question. Are you asking an inferential question? A prediction question? Take care to match the modeling approach with the question type. Here are some things to think about.
+
+## Inferential or causal questions
+
+* What is your outcome? Do you have a key predictor that you want to correlate with your outcome?
+* What factors might confound or cloud any associations that you try to estimate or explore?
+* Are there any confounding factors for which you do not have measurements in your dataset? How can you deal with this?
+* How robust are your findings to small changes to the model?
+
+## Prediction questions
+
+* Have you split your data into appropriate training and test sets? Are the data adequate for doing this?
+* How good is the error rate of your prediction model? Can it be improved by changing algorithms?
+* Can you add any external data that might improve your predictions?
+* What types of features appear to be most important to prediction skill?
+* Are all types of prediction errors equally important in your problem?
+
+Note that not all of these questions will be relevant to your problem so don't worry if you don't have answers to all of them. They are just questions to consider as you develop your model.
+
+# Task 4 - Developing Final Model / Algorithm / Prediction
+
+This task is all about finalizing your analysis so that you can best answer the question you developed earlier on in the project. Make sure that you can develop a coherent story or argument about your problem (you will ultimately need to write up a slide deck and a report).
+
+You might want to consider the following as you finalize your analysis
+
+* Do you have an answer to your question? It's possible that you didn't answer the question completely, but see the next question.
+* Do you have a reasonable explanation for how your analysis addresses the question you posed? Can you come up with a theory or hypothesis that explains what is going on?
+* Is your work reproducible? Do you have all of the data and code needed for others to reproduce your work?
+
+# Task 5 - Report Writing and Slide Deck
+
+The goal of this task is to write a report that can be used as the basis for a final product or perhaps a submission to the Yelp dataset challenge. In addition, you need to create a __5-slide__ deck using RStudio Presenter tools to describe and promote your analysis.
+
+## Report
+
+Write a 5-page report using R Markdown that describes your question/problem, how you used the dataset, the analysis you conducted, and the conclusions that you drew from the analysis. Your report must have the following sections clearly labelled:
+
+* Title - A brief description of what you've done
+* Introduction - A description of the question/problem and the rationale for studying it
+* **Methods and Data** - Describe how you used the data and the type of analytic methods that you used; it's okay to be a bit technical here but clarity is important
+* **Results** - Describe what you found through your analysis of the data.
+* **Discussion** - Explain how you interpret the results of your analysis and what the implications are for your question/problem.
+
+## Slide Deck
+
+Write 5 slides using RStudio Presenter that summarizes your report for a general audience. Explain what the problem you presented is interesting and how your analysis directly addresses that problem.
